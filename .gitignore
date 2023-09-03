@@ -1,0 +1,12 @@
+
+# Node modules
+node_modules/
+
+# Debug log
+npm-debug.log
+
+# macOS files
+.DS_Store
+
+# Development
+blog-articles/
