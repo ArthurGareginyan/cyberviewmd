@@ -1,0 +1,16 @@
+{
+    "name": "cyberviewmd",
+    "productName": "CyberViewMD",
+    "version": "0.1.0",
+    "description": "CyberViewMD is a macOS application designed for previewing Markdown files",
+    "main": "main.js",
+    "scripts": {
+        "start": "electron ."
+    },
+    "author": "Arthur Gareginyan <contact@arthurgareginyan.com>",
+    "license": "GPLv3",
+    "dependencies": {
+        "electron": "^15.0.0",
+        "marked": "^7.0.5"
+    }
+}
