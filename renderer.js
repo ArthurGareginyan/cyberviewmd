@@ -11,11 +11,13 @@ function toggleDisplay(element, condition) {
     }
 }
 
+// Event handler for 'ready' IPC event
 ipcRenderer.on('ready', (event) => {
     ipcRenderer.send('open-file')
     toggleDisplay(helperWindow, true)
 })
 
+// Event handler for 'file-content' IPC event
 ipcRenderer.on('file-content', (event, fileContent) => {
     const markdownContainer = document.getElementById('markdown-container')
     const renderedMarkdown = marked(fileContent)
@@ -23,6 +25,7 @@ ipcRenderer.on('file-content', (event, fileContent) => {
     toggleDisplay(helperWindow, false)
 })
 
+// Event handler for 'clear-content' IPC event
 ipcRenderer.on('clear-content', (event) => {
     const markdownContainer = document.getElementById('markdown-container')
     markdownContainer.innerHTML = ''
