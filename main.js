@@ -29,12 +29,14 @@ function createWindow() {
       submenu: [
         {
           label: 'Open File',
+          accelerator: 'CmdOrCtrl+O',
           click() {
             openFile(mainWindow)
           }
         },
         {
           label: 'Clear Content',
+          accelerator: 'CmdOrCtrl+D',
           click() {
             mainWindow.webContents.send('clear-content')
           }
