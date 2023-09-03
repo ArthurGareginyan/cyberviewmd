@@ -18,6 +18,25 @@ function createWindow() {
         mainWindow.webContents.send('ready')
     })
 
+    function openFile(mainWindow) {
+        dialog.showOpenDialog({
+            filters: [
+                {
+                    name: 'Markdown Files',
+                    extensions: ['md', 'markdown']
+                }
+            ],
+            properties: ['openFile']
+        }).then(result => {
+            if (!result.canceled && result.filePaths.length > 0) {
+                const filePath = result.filePaths[0]
+                const fileContent = fs.readFileSync(filePath, 'utf8')
+                const parsedContent = matter(fileContent)
+                mainWindow.webContents.send('file-content', parsedContent.content)
+            }
+        })
+    }
+
     const isMac = process.platform === 'darwin'
     const menu = Menu.buildFromTemplate([
         ...(isMac ? [{ role: 'appMenu' }] : []),
@@ -45,25 +64,6 @@ function createWindow() {
         { role: 'windowMenu' }
     ])
     Menu.setApplicationMenu(menu)
-
-    function openFile(mainWindow) {
-        dialog.showOpenDialog({
-            filters: [
-                {
-                    name: 'Markdown Files',
-                    extensions: ['md', 'markdown']
-                }
-            ],
-            properties: ['openFile']
-        }).then(result => {
-            if (!result.canceled && result.filePaths.length > 0) {
-                const filePath = result.filePaths[0]
-                const fileContent = fs.readFileSync(filePath, 'utf8')
-                const parsedContent = matter(fileContent)
-                mainWindow.webContents.send('file-content', parsedContent.content)
-            }
-        })
-    }
 }
 
 app.whenReady().then(createWindow)
