@@ -1,6 +1,5 @@
 const { app, BrowserWindow, dialog, ipcMain, Menu } = require('electron')
 const fs = require('fs')
-const path = require('path')
 const matter = require('gray-matter')
 
 function createWindow() {
@@ -8,11 +7,9 @@ function createWindow() {
         width: 800,
         height: 600,
         webPreferences: {
-            preload: path.join(__dirname, 'renderer.js'),
             nodeIntegration: true,
-            contextIsolation: false,
-            enableRemoteModule: true
-        },
+            contextIsolation: false
+        }
     })
 
     mainWindow.loadFile('index.html')
