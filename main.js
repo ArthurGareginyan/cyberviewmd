@@ -24,12 +24,11 @@ function createWindow() {
     const isMac = process.platform === 'darwin'
 
     const template = [
-        ...(isMac ? [{
-            role: 'appMenu'
-        }] : []),
+        ...(isMac ? [{ role: 'appMenu' }] : []),
         {
             label: 'File',
-            submenu: [{
+            submenu: [
+                {
                     label: 'Open File',
                     accelerator: 'CmdOrCtrl+O',
                     click() {
@@ -45,15 +44,9 @@ function createWindow() {
                 }
             ]
         },
-        {
-            role: 'editMenu'
-        },
-        {
-            role: 'viewMenu'
-        },
-        {
-            role: 'windowMenu'
-        }
+        { role: 'editMenu' },
+        { role: 'viewMenu' },
+        { role: 'windowMenu' }
     ]
 
     const menu = Menu.buildFromTemplate(template)
