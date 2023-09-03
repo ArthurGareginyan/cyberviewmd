@@ -37,7 +37,7 @@ function createWindow() {
                 },
                 {
                     label: 'Close File',
-                    accelerator: 'CmdOrCtrl+D',
+                    accelerator: 'CmdOrCtrl+W',
                     click() {
                         mainWindow.webContents.send('close-file')
                     }
