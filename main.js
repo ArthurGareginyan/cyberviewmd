@@ -36,10 +36,10 @@ function createWindow() {
                     }
                 },
                 {
-                    label: 'Clear Content',
+                    label: 'Close File',
                     accelerator: 'CmdOrCtrl+D',
                     click() {
-                        mainWindow.webContents.send('clear-content')
+                        mainWindow.webContents.send('close-file')
                     }
                 }
             ]

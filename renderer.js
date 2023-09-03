@@ -25,8 +25,8 @@ ipcRenderer.on('file-content', (event, fileContent) => {
     toggleDisplay(helperWindow, false)
 })
 
-// Event handler for 'clear-content' IPC event
-ipcRenderer.on('clear-content', (event) => {
+// Event handler for 'close-file' IPC event
+ipcRenderer.on('close-file', (event) => {
     const markdownContainer = document.getElementById('markdown-container')
     markdownContainer.innerHTML = ''
     toggleDisplay(helperWindow, true)

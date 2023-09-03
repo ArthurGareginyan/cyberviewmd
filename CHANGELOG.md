@@ -11,10 +11,10 @@ All notable changes to the "CyberViewMD" project will be documented in this file
 - Introduced a dark theme as the default visual setting.
 - Introduced a top bar menu with two custom actions:
   - "Open File": Opens a dialog to select a Markdown file for previewing.
-  - "Clear Content": Clears the rendered Markdown content from the main window.
+  - "Close File": Clears the rendered Markdown content from the main window.
 - Implemented keyboard shortcuts for enhanced usability:
   - "Open File": Key combination `CmdOrCtrl+O` triggers the file dialog for selecting a Markdown file.
-  - "Clear Content": Key combination `CmdOrCtrl+D` clears the rendered Markdown content from the main window.
+  - "Close File": Key combination `CmdOrCtrl+D` clears the rendered Markdown content from the main window.
 - Retained standard menu items ("File", "Edit", "View", "Window") alongside custom actions for a more comprehensive user interface.
 - Implemented a feature to toggle the visibility of the main title `<h1 class="text-center">CyberViewMD: Markdown Previewer</h1>` based on the content state in the main window.
   - The title is hidden when a Markdown file is displayed.
