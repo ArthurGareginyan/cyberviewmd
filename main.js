@@ -38,6 +38,16 @@ function createWindow() {
         })
     }
 
+    // IPC event to open file
+    ipcMain.on('manual-open-file', (event) => {
+        openFile()
+    })
+
+    // IPC event to close file
+    ipcMain.on('close-file', (event) => {
+        mainWindow.webContents.send('close-file')
+    })
+
     // Adding menu
     const isMac = process.platform === 'darwin'
     const menu = Menu.buildFromTemplate([

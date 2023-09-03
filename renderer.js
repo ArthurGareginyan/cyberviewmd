@@ -13,7 +13,6 @@ function toggleDisplay(element, condition) {
 
 // Event handler for 'ready' IPC event
 ipcRenderer.on('ready', (event) => {
-    ipcRenderer.send('open-file')
     toggleDisplay(helperWindow, true)
 })
 
@@ -30,4 +29,14 @@ ipcRenderer.on('close-file', (event) => {
     const markdownContainer = document.getElementById('markdown-container')
     markdownContainer.innerHTML = ''
     toggleDisplay(helperWindow, true)
+})
+
+// Function to initialize upload button
+document.addEventListener('DOMContentLoaded', () => {
+    const uploadButton = document.getElementById('upload-button');
+    if (uploadButton) {
+        uploadButton.addEventListener('click', () => {
+            ipcRenderer.send('manual-open-file')
+        })
+    }
 })
