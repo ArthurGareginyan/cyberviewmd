@@ -18,6 +18,7 @@ function createWindow() {
         mainWindow.webContents.send('ready')
     })
 
+    // Function to open file
     function openFile(mainWindow) {
         dialog.showOpenDialog({
             filters: [
@@ -37,6 +38,7 @@ function createWindow() {
         })
     }
 
+    // Adding menu
     const isMac = process.platform === 'darwin'
     const menu = Menu.buildFromTemplate([
         ...(isMac ? [{ role: 'appMenu' }] : []),
