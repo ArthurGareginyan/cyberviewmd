@@ -19,7 +19,7 @@ function createWindow() {
     })
 
     // Function to open file
-    function openFile(mainWindow) {
+    function openFile() {
         dialog.showOpenDialog({
             filters: [
                 {
@@ -49,7 +49,7 @@ function createWindow() {
                     label: 'Open File',
                     accelerator: 'CmdOrCtrl+O',
                     click: () => {
-                        openFile(mainWindow)
+                        openFile()
                     }
                 },
                 {
