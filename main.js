@@ -54,10 +54,12 @@ function createWindow() {
 
     function openFile(mainWindow) {
         dialog.showOpenDialog({
-            filters: [{
-                name: 'Markdown Files',
-                extensions: ['md', 'markdown']
-            }],
+            filters: [
+                {
+                    name: 'Markdown Files',
+                    extensions: ['md', 'markdown']
+                }
+            ],
             properties: ['openFile']
         }).then(result => {
             if (!result.canceled && result.filePaths.length > 0) {
