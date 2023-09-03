@@ -22,8 +22,7 @@ function createWindow() {
     })
 
     const isMac = process.platform === 'darwin'
-
-    const template = [
+    const menu = Menu.buildFromTemplate([
         ...(isMac ? [{ role: 'appMenu' }] : []),
         {
             label: 'File',
@@ -31,14 +30,14 @@ function createWindow() {
                 {
                     label: 'Open File',
                     accelerator: 'CmdOrCtrl+O',
-                    click() {
+                    click: () => {
                         openFile(mainWindow)
                     }
                 },
                 {
                     label: 'Close File',
                     accelerator: 'CmdOrCtrl+W',
-                    click() {
+                    click: () => {
                         mainWindow.webContents.send('close-file')
                     }
                 }
@@ -47,9 +46,7 @@ function createWindow() {
         { role: 'editMenu' },
         { role: 'viewMenu' },
         { role: 'windowMenu' }
-    ]
-
-    const menu = Menu.buildFromTemplate(template)
+    ])
     Menu.setApplicationMenu(menu)
 
     function openFile(mainWindow) {
