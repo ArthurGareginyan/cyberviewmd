@@ -15,6 +15,7 @@ The Markdown format is widely used for documentation, note-taking, and content c
 - Quick and responsive Markdown file preview
 - Minimalist design with clean and distraction-free UI for easy-to-use
 - Support for various Markdown elements like headers, lists, tables, etc.
+- Automatically removes Front-Matter for a focused viewing experience
 - Drag-and-drop file opening
 - Keyboard shortcuts for ease of use
 

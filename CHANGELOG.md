@@ -18,3 +18,4 @@ All notable changes to the "CyberViewMD" project will be documented in this file
   - Revised `main.js` to handle file opening and reading Markdown files.
   - Updated `renderer.js` to convert Markdown content to HTML for display.
  to your `CHANGELOG.md` file.
+- Enhanced `main.js` to parse and exclude Front-Matter from Markdown files. This ensures that only the actual content is rendered, improving the user experience.

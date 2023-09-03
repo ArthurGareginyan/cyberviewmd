@@ -1,6 +1,7 @@
 const { app, BrowserWindow, dialog, ipcMain } = require('electron')
 const fs = require('fs')
 const path = require('path')
+const matter = require('gray-matter')
 
 function createWindow() {
   const mainWindow = new BrowserWindow({
@@ -29,7 +30,8 @@ function createWindow() {
       if (!result.canceled && result.filePaths.length > 0) {
         const filePath = result.filePaths[0]
         const fileContent = fs.readFileSync(filePath, 'utf8')
-        mainWindow.webContents.send('file-content', fileContent)
+        const parsedContent = matter(fileContent)
+        mainWindow.webContents.send('file-content', parsedContent.content)
       }
     })
   })
