@@ -10,3 +10,8 @@ ipcRenderer.on('file-content', (event, fileContent) => {
   const renderedMarkdown = marked(fileContent)
   markdownContainer.innerHTML = renderedMarkdown
 })
+
+ipcRenderer.on('clear-content', (event) => {
+  const markdownContainer = document.getElementById('markdown-container')
+  markdownContainer.innerHTML = ''
+})

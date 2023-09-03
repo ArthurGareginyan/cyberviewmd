@@ -27,7 +27,12 @@ function createWindow() {
     {
       label: 'File',
       submenu: [
-
+        {
+          label: 'Clear Content',
+          click() {
+            mainWindow.webContents.send('clear-content')
+          }
+        }
       ]
     },
     { role: 'editMenu' },
