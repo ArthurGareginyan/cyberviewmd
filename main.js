@@ -28,6 +28,12 @@ function createWindow() {
       label: 'File',
       submenu: [
         {
+          label: 'Open File',
+          click() {
+            openFile(mainWindow)
+          }
+        },
+        {
           label: 'Clear Content',
           click() {
             mainWindow.webContents.send('clear-content')
@@ -43,7 +49,7 @@ function createWindow() {
   const menu = Menu.buildFromTemplate(template)
   Menu.setApplicationMenu(menu)
 
-  ipcMain.on('open-file', (event) => {
+  function openFile(mainWindow) {
     dialog.showOpenDialog({
       filters: [
         { name: 'Markdown Files', extensions: ['md', 'markdown'] }
@@ -57,7 +63,7 @@ function createWindow() {
         mainWindow.webContents.send('file-content', parsedContent.content)
       }
     })
-  })
+  }
 }
 
 app.whenReady().then(createWindow)

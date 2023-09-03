@@ -9,7 +9,8 @@ All notable changes to the "CyberViewMD" project will be documented in this file
 - Integrated Bootstrap 5 for UI design and styling.
 - Implemented functionality to render content from Markdown files.
 - Introduced a dark theme as the default visual setting.
-- Introduced a top bar menu with custom action:
+- Introduced a top bar menu with two custom actions:
+  - "Open File": Opens a dialog to select a Markdown file for previewing.
   - "Clear Content": Clears the rendered Markdown content from the main window.
 - Retained standard menu items ("File", "Edit", "View", "Window") alongside custom actions for a more comprehensive user interface.
 - Created essential documentation files: README.md, CONTRIBUTING.md, and CHANGELOG.md.
