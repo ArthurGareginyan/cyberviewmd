@@ -48,14 +48,14 @@ function createWindow() {
                 {
                     label: 'Open File',
                     accelerator: 'CmdOrCtrl+O',
-                    click: () => {
+                    click() {
                         openFile()
                     }
                 },
                 {
                     label: 'Close File',
                     accelerator: 'CmdOrCtrl+W',
-                    click: () => {
+                    click() {
                         mainWindow.webContents.send('close-file')
                     }
                 }
