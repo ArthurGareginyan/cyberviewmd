@@ -10,3 +10,6 @@ npm-debug.log
 
 # Development
 blog-articles/
+
+# Ignore the dist folder
+/dist
