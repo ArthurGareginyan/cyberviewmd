@@ -1,1 +1,48 @@
+#helper-window {
+    font-family: Georgia, serif;
+    font-size: 40px;
+    letter-spacing: 0px;
+    word-spacing: 2px;
+    color: lightslategray;
+    font-weight: 400;
+    text-decoration: none;
+    font-style: oblique;
+    font-variant: normal;
+    text-transform: none;
+}
 
+#helper-window h1 {
+    font-size: 45px;
+}
+#helper-window h1 span {
+    font-size: 25px;
+}
+
+#helper-window button#upload-button {
+    width: 200px;
+    height: 200px;
+    color: lightslategray;
+    border: 5px outset lightslategray;
+    border-radius: 25px;
+}
+#helper-window button#upload-button i.fas {
+    color: #383e44;
+    font-size: 100px;
+}
+#helper-window button#upload-button p {
+    padding: 8px;
+    margin-bottom: -8px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    letter-spacing: 2px;
+    word-spacing: 2px;
+    font-weight: normal;
+    text-decoration: none;
+    font-style: normal;
+    font-variant: small-caps;
+    text-transform: none;
+}
+
+#markdown-container>:first-child {
+    margin-top: 40px;
+}

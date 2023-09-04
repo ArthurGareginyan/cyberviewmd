@@ -11,20 +11,27 @@
 
     <body class="bg-dark text-white">
 
-        <div class="container mt-4">
+        <div class="container">
 
             <!-- Clear Window -->
             <div id="helper-window" style="display: none;">
-                <h1 id="main-title" class="text-center">CyberViewMD: Markdown Previewer</h1>
-                <div id="open-file-button" class="text-center">
-                    <button id="upload-button" class="btn btn-lg">
-                        <i class="fas fa-file-upload fa-bounce fa-2x"></i>
-                    </button>
+                <div class="d-flex flex-column vh-100">
+                    <div class="d-flex align-items-center justify-content-center" style="flex-grow: 2;">
+                        <h1 id="main-title" class="text-center">CyberViewMD <br><span>Markdown Previewer</span></h1>
+                    </div>
+                    <div class="d-flex align-items-start justify-content-center" style="flex-grow: 3;">
+                        <div class="text-center">
+                            <button id="upload-button" class="btn btn-lg">
+                                <i class="fas fa-file-upload fa-bounce fa-2x"></i>
+                                <p>Open File</p>
+                            </button>
+                        </div>
+                    </div>
                 </div>
             </div>
 
             <!-- Main Content -->
-            <main id="markdown-container" class="mt-4">
+            <main id="markdown-container">
                 <!-- Rendered Markdown will appear here -->
             </main>
         </div>
