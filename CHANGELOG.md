@@ -20,7 +20,7 @@ All notable changes to the "CyberViewMD" project will be documented in this file
   - The title is hidden when a Markdown file is displayed.
   - The title reappears when the content in the main window is cleared.
 - Bootstrap v5.3.1 integrated into the app without relying on a CDN, fully packaged into the app.
-- Font Awesome v5.15.4 integrated into the app without relying on a CDN, fully packaged into the app.
+- Font Awesome v6.4.2 integrated into the app without relying on a CDN, fully packaged into the app.
 - Created essential documentation files: README.md, CONTRIBUTING.md, and CHANGELOG.md.
 - Included a representative screenshot of the application in `screenshot.png`.
 
