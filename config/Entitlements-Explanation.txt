@@ -1,0 +1,17 @@
+
+# Explanation of Entitlements Files
+
+## entitlements.mas.plist
+
+This file specifies entitlements that are specific to the main app.
+
+- `com.apple.security.app-sandbox`: Enables the App Sandbox for security reasons. 
+- `com.apple.security.files.user-selected.read-write`: Allows the app to read and write files that the user explicitly selects.
+
+## entitlements.mas.inherit.plist
+
+This file specifies entitlements that should be inherited by all components of the app, like helper apps or plugins.
+
+- `com.apple.security.app-sandbox`: Similar to the main app, this enforces the App Sandbox for all inheriting components.
+
+These are basic entitlements. Depending on your app's functionalities, you might need to add more entitlements.
